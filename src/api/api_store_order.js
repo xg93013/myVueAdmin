@@ -5,30 +5,29 @@ export default {
   findList: params => {
     return API.GET('/api/v1/storeorders', params)
   },
-
   //查询获取一条订单信息
   // restful风格
   // findById: id => {
   //   return API.GET(`/api/v1/storeorders/${id}`)
   // },
+  // 查找订单
   findById: params => {
     return API.GET('/api/v1/storeorders/findById', params)
   },
-
+  // 添加订单
   add: params => {
-    return API.POST(`/api/v1/storeorders`, params)
+    return API.GET(`/api/v1/storeorders/add`, params)
   },
-  update: (id, params) => {
-    return API.PUT(`/api/v1/storeorders/${id}`, params)
+  // 更新订单
+  update: params => {
+    return API.GET(`/api/v1/storeorders/update`, params)
   },
-
   //单个删除订单
-  remove: id => {
-    return API.DELETE(`/api/v1/storeorders/${id}`)
+  remove: params => {
+    return API.GET(`/api/v1/storeorders/remove`, params)
   },
-
-  //批量删除，传ids数组
-  removeBatch: (ids) => {
-    return API.DELETE(`/api/v1/storeorders/batch/${ids}`)
+  //批量删除
+  removeBatch: params => {
+    return API.GET(`/api/v1/storeorders/removeBatch`, params)
   }
 }

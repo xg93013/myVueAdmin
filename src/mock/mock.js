@@ -53,12 +53,23 @@ export default {
             });
         });
 
-        //获取订单列表
+        //获取商城订单列表
         mock.onGet('/api/v1/storeorders').reply(config => {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
                     resolve([200, {
                         data: storeOrder
+                    }]);
+                }, 1000);
+            });
+        });
+
+        //获取服务订单列表
+        mock.onGet('/api/v1/serviceorders').reply(config => {
+            return new Promise((resolve, reject) => {
+                setTimeout(() => {
+                    resolve([200, {
+                        data: serviceOrder
                     }]);
                 }, 1000);
             });

@@ -30,9 +30,9 @@
           </el-table-column>
           <el-table-column prop="imgUrl" label="商品封面图" width="220" sortable>
           </el-table-column>
-          <el-table-column prop="price" label="价格">
+          <el-table-column prop="price" label="价格" sortable>
           </el-table-column>
-          <el-table-column prop="goodsAmount" label="商品数量">
+          <el-table-column prop="goodsAmount" label="商品数量" sortable>
           </el-table-column>
           <el-table-column prop="goodsDes" label="商品描述">
           </el-table-column>
@@ -45,6 +45,13 @@
             </template>
           </el-table-column>
         </el-table>
+        <div class="page-box">
+          <el-pagination
+            background="#f5f5f5"
+            layout="prev, pager, next"
+            :total="1000">
+          </el-pagination>
+        </div>
       </div>
       <div class="btn_box">
         <el-row>
@@ -239,15 +246,15 @@
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang="scss" scoped>
   .storeOrder_form{
-    margin:40px 0 50px 20px;
+    margin:40px 0 50px 0;
     padding:20px;
     background: #fff;
   }
   .order_item{
     background: #fff;
-    margin:20px;
+    margin:10px 0 20px 0;
     padding: 20px;
   }
   .head_title{
@@ -255,6 +262,9 @@
     margin:10px 0 20px 0;
   }
   .btn_box{
-    margin:20px;
+    margin:10px 0 20px 0;
+  }
+  .page-box{
+    margin-top: 20px;
   }
 </style>

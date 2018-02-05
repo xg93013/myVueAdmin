@@ -7,6 +7,7 @@ import index from '@/components/index/index.vue'
 import storeOrder from '@/components/orderMan/storeOrder.vue'
 import serviceOrder from '@/components/orderMan/serviceOrder.vue'
 import storeOrderDetail from '@/components/orderMan/storeOrderDetail.vue'
+import userMan from '@/components/userMan/userMan.vue'
 
 Vue.use(Router)
 
@@ -47,6 +48,15 @@ export default new Router({
         { path: '/serviceOrder', component: serviceOrder, name: '服务订单' },
         { path: '/storeOrderDetail', component: storeOrderDetail, name: '订单详情', hidden: true},
         { path: '/storeOrder', component: storeOrder, name: '商城订单' }
+      ]
+    },
+    {
+      path:"/",
+      name:"用户管理",
+      iconCls: 'el-icon-setting',
+      component:home,
+      children: [
+        { path: '/userMan', component: userMan, name: '资料修改' }
       ]
     },
     {

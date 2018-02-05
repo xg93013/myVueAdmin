@@ -1,10 +1,15 @@
 let Mock = require('mockjs')
 const indexData = Mock.mock({
-  "headData": {
-    "processOrder": '@integer(0, 20)',
-    "nonePayOrder": '@integer(0, 20)',
-    "waitDealOrder": '@integer(0, 20)',
-    "successOrder": '@integer(0, 20)'
+  "headData": 
+  {
+    // {value:'@integer(0, 20)', name:'用户已付款'},
+    // {value:'@integer(0, 20)', name:'用户未付款'},
+    // {value:'@integer(0, 20)', name:'待处理'},
+    // {value:'@integer(0, 20)', name:'已完成'}
+    noPayNum: '@integer(0, 20)',
+    payNum: '@integer(0, 20)',
+    waitDealNum: '@integer(0, 20)',
+    finishNum: '@integer(0, 20)'
   }
 })
 export { indexData }

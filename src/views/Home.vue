@@ -127,7 +127,7 @@
 				flex: 1;
 				overflow-y: scroll;
 				padding: 20px;
-				background:#fff ;
+				background:#f5f5f5 ;
 				.breadcrumb-container {
 					//margin-bottom: 15px;
 					.title {
