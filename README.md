@@ -1,4 +1,4 @@
-## Vue2.0 + Element-UI宠物商城后台管理系统
+# Vue2.0 + Element-UI宠物商城后台管理系统
 
 1、页面ui（Element-UI + sass + vue-router）
 
